@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 380px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        input[type="file"],
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            width: 60%;
+            padding: 12px;
+            background-color: #4285F4;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3367D6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meme Generator</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+
+            <input type="text" name="top_text" placeholder="Zgornji tekst">
+
+            <input type="text" name="bottom_text" placeholder="Spodnji tekst">
+
+            <button type="submit">Generiraj meme</button>
+        </form>
+    </div>
+</body>
+</html>

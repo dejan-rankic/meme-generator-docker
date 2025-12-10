@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  meme-generator:
+    build: .
+    image: meme-generator
+    container_name: meme-generator
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./static/memes:/app/static/memes
+    environment:
+      - FLASK_ENV=production
+
